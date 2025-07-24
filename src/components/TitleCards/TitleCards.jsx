@@ -11,7 +11,7 @@ const TitleCards = ({title, category}) => {
     method: 'GET',
     headers: { 
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MmFkODIwODBhMzc5ZTg1OWVjNmI3NzFkOWRkMWU1MiIsIm5iZiI6MTc1MzIwMTc3OC4yMjQsInN1YiI6IjY4N2ZiYzcyYjQ1YjNmYTQ4NTE2YTlmOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.R0tKtd85CeweR9HGffwje3tDa-bYnEZ6MYmKxNlA29k'
+      Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_KEY}`
     }
   };
   
@@ -20,25 +20,31 @@ const TitleCards = ({title, category}) => {
     cardsRef.current.scrollLeft += event.deltaY;
   }
   
-  useEffect(()=>{
+  useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${category?category:"now_playing"}?language=en-US&page=1`, options)
-    .then(response => response.json())
-    .then(response => setApiData(response.results || []))
-    .catch(err => {
-      console.error(err);
-      setApiData([]);
-    });
+      .then(response => response.json())
+      .then(response => setApiData(response.results || []))
+      .catch(err => {
+        console.error(err);
+        setApiData([]);
+      });
 
     if(cardsRef.current) {
       cardsRef.current.addEventListener('wheel', handlewheel);
     }
-  },[])
+
+    return () => {
+      if(cardsRef.current) {
+        cardsRef.current.removeEventListener('wheel', handlewheel);
+      }
+    };
+  }, [category])
   return (
-    <div className='titlecards'>
+    <div className='title-cards'>
       <h2>{title?title:"Popular on Netflix"}</h2>
       <div className="card-list" ref={cardsRef}>
         {apiData.map((card, index)=>{
-          return <Link to={`/player/${card.id}`} className="card" key={index} onClick={() => navigate(`/player/DQ4r7HegRQw`)}>
+          return <Link to={`/player/${card.id}`} className="card" key={index}>
             <img src={`https://image.tmdb.org/t/p/w500${card.backdrop_path || card.poster_path}`} alt="" />
             <p>{card.original_title}</p>
           </Link>

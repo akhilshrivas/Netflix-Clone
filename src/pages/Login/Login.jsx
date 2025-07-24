@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './Login.css'
 import logo from '../../assets/logo.png'
-import { login, signup } from '../../firebase'
 import netflix_spinner from '../../assets/netflix_spinner.gif'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
   const [signState, setSignState] = useState("Sign In")
@@ -10,17 +10,17 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-
-  const user_auth = async (event)=>{
+  const user_auth = async (event) => {
     event.preventDefault();
     setLoading(true);
-    if(signState === "Sign In"){
-      await login(email, password);
-    }else{
-      await signup(name, email, password);
-    }
-    setLoading(false);
+    
+    // Mock authentication
+    setTimeout(() => {
+      setLoading(false);
+      navigate('/');
+    }, 1500);
   }
 
 

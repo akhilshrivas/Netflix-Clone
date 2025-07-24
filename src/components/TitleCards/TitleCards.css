@@ -34,13 +34,13 @@
    padding-left: 6%; 
 }
 @media (max-width: 600px){
-   itle-cards h2{
+   .title-cards h2{
     font-size: 15px;
    }
    .card-list img{
     width: 200px;
    } 
-   .cards-list p{
+   .card-list p{
     font-size: 12px;
    }
 }
