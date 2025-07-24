@@ -13,10 +13,8 @@ It replicates core Netflix functionality including sign in/sign up, movie browsi
 
 ##  Screenshots
 
-> (Make sure you place your images inside a `screenshots/` folder in your project)
-
-![Netflix Clone Home](screenshots/home-netflix-clone.png)
-![Netflix Clone Alt View](screenshots/home-netflix1-clone.png)
+![Netflix Clone Home](home-netflix-clone.png)
+![Netflix Clone Alt View](home-netflix1-clone.png)
 
 ---
 
