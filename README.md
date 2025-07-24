@@ -1,5 +1,17 @@
 ````markdown path=README.md mode=EDIT
-# Netflix Clone
+# Netflix Clone 
+
+A modern Netflix UI clone built with React + Vite + Tailwind CSS + Firebase Auth.
+
+##  Live Demo
+
+[View Live](https://netflix-clone-8f202.web.app)
+
+##  Screenshot
+
+<!-- Replace the path if you place your screenshot in a different folder -->
+![Netflix Clone Screenshot](assets/screenshot.png)
+
 
 A modern Netflix clone built with React, Vite, and Firebase. This application replicates the core functionality of Netflix including user authentication, movie browsing, and video streaming.
 
