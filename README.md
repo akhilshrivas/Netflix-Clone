@@ -1,104 +1,118 @@
-````markdown path=README.md mode=EDIT
-# Netflix Clone 
+#  Netflix Clone
 
-A modern Netflix UI clone built with React + Vite + Tailwind CSS + Firebase Auth.
+A modern Netflix UI clone built with React + Vite + Tailwind CSS + Firebase Authentication.  
+It replicates core Netflix functionality including sign in/sign up, movie browsing, and YouTube trailer streaming using the TMDB API.
+
+---
 
 ##  Live Demo
 
-[View Live](https://netflix-clone-8f202.web.app)
+ [View Live](https://netflix-clone-8f202.web.app)
 
-##  Screenshot
+---
 
-[Netflix Clone Screenshot]
-home netflix clone.png
-home netflix1 clone.png
+##  Screenshots
 
+> (Make sure you place your images inside a `screenshots/` folder in your project)
 
+![Netflix Clone Home](screenshots/home-netflix-clone.png)
+![Netflix Clone Alt View](screenshots/home-netflix1-clone.png)
 
-A modern Netflix clone built with React, Vite, and Firebase. This application replicates the core functionality of Netflix including user authentication, movie browsing, and video streaming.
+---
+
+##  How It Works
+
+- 🔐 Users must **sign up or log in** to access the app.
+- 🎬 Once authenticated, they can **browse movies** fetched from the TMDB API.
+- 📺 Clicking on a movie poster redirects to **YouTube**, showing the trailer or related video.
+
+---
 
 ##  Features
 
-- **User Authentication**: Sign up and sign in with Firebase Auth
-- **Responsive Design**: Mobile-first design with Tailwind CSS
-- **Movie Database**: Integration with TMDB API for movie data
-- **Video Streaming**: YouTube embedded player for trailers
-- **Dynamic Navigation**: Scroll-based navbar styling
-- **Toast Notifications**: User feedback with react-toastify
-- **Protected Routes**: Authentication-based routing
+- **User Authentication** – Firebase Email/Password login & signup
+- **Responsive UI** – Tailwind CSS for mobile-first design
+- **Movie Listings** – TMDB API integration for movies and shows
+- **YouTube Trailers** – Click on a movie to watch its trailer
+- **Toast Notifications** – Feedback with `react-toastify`
+- **Protected Routes** – React Router access control based on login
+- **Dynamic Navbar** – Navbar styling changes on scroll
 
-##  Tech Stack
+---
+
+## 🛠 Tech Stack
 
 - **Frontend**: React 19, Vite
 - **Styling**: Tailwind CSS
 - **Authentication**: Firebase Auth
 - **Database**: Firebase Firestore
-- **API**: The Movie Database (TMDB)
+- **API**: TMDB (The Movie Database)
 - **Routing**: React Router DOM
 - **Notifications**: React Toastify
 
-##  Installation
+---
 
-1. Clone the repository:
+##  Getting Started
+
+###  Installation
+
+1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/netflix-clone.git
 cd netflix-clone
-```
+Install dependencies
 
-2. Install dependencies:
-```bash
+bash
+Copy code
 npm install
-```
+Set up Firebase
 
-3. Create a Firebase project and add your config to `src/firebase.js`
+Create a Firebase project
 
-4. Get TMDB API key and add it to `src/components/TitleCards/TitleCards.jsx`
+Add your Firebase config to src/firebase.js
 
-5. Start the development server:
-```bash
+Set up TMDB
+
+Get a TMDB API key
+
+Add it to src/components/TitleCards/TitleCards.jsx
+
+Start the development server
+
+bash
+Copy code
 npm run dev
-```
+ Available Scripts
+npm run dev – Start the development server
 
-##  Available Scripts
+npm run build – Build the app for production
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+npm run preview – Preview the production build
 
-##  Screenshots
+npm run lint – Run ESLint checks
 
-![Home Page](screenshots/home.png)
-![Login Page](screenshots/login.png)
+🤝 Contributing
+Fork the repo
 
-##  Contributing
+Create a new branch (git checkout -b feature/AmazingFeature)
 
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Commit your changes (git commit -m 'Add some AmazingFeature')
 
-##  License
+Push to the branch (git push origin feature/AmazingFeature)
 
+Open a Pull Request
+
+📄 License
 This project is licensed under the MIT License.
 
-##  Acknowledgments
+🙏 Acknowledgments
+Netflix – UI inspiration
 
-- Netflix for the design inspiration
-- TMDB for the movie database API
-- Firebase for authentication and database services
-````
+TMDB – Movie data and images
 
-# React + Vite
+Firebase – Auth and database services
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+markdown
+Copy code
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
