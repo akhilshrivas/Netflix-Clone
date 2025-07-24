@@ -9,8 +9,10 @@ A modern Netflix UI clone built with React + Vite + Tailwind CSS + Firebase Auth
 
 ##  Screenshot
 
-<!-- Replace the path if you place your screenshot in a different folder -->
-![Netflix Clone Screenshot](assets/screenshot.png)
+[Netflix Clone Screenshot]
+home netflix clone.png
+home netflix1 clone.png
+
 
 
 A modern Netflix clone built with React, Vite, and Firebase. This application replicates the core functionality of Netflix including user authentication, movie browsing, and video streaming.
