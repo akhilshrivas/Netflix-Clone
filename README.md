@@ -11,13 +11,6 @@ It replicates core Netflix functionality including sign in/sign up, movie browsi
 
 ---
 
-##  Screenshots
-
-![Netflix Clone Home](home-netflix-clone.png)
-![Netflix Clone Alt View](home-netflix1-clone.png)
-
----
-
 ##  How It Works
 
 - 🔐 Users must **sign up or log in** to access the app.
