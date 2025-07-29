@@ -5,10 +5,12 @@ import search_icon from '../../assets/search_icon.svg'
 import bell_icon from '../../assets/bell_icon.svg'
 import profile_img from '../../assets/profile_img.png'
 import caret_icon from '../../assets/caret_icon.svg'
-import { logout } from '../../firebase'
+import { useNavigate } from 'react-router-dom'
+
 
 const Navbar = () => {
 
+  const navigate = useNavigate();
   const navRef = useRef();
 
  useEffect(() => {
@@ -22,7 +24,7 @@ const Navbar = () => {
   },[])
 
   return (
-    <div ref={navRef}className='navbar'>
+    <div ref={navRef} className='navbar'>
       <div className="navbar-left">
         <img src={logo} alt="Netflix Logo" />
         <ul>
@@ -31,7 +33,7 @@ const Navbar = () => {
           <li>Movies</li>
           <li>New & popular</li>
           <li>My list</li>
-          <li>Browse by languagee</li>
+          <li>Browse by language</li>
         </ul>
         </div>
       <div className="navbar-right">
@@ -42,7 +44,7 @@ const Navbar = () => {
         <img src={profile_img} alt="" className='profile' />
         <img src={caret_icon} alt="" />
         <div className="dropdown">
-          <p onClick={()=>{logout()}}>Sign out of Netflix</p>
+          <p  onClick={() => navigate('/login')}>Log Out</p>
         </div>
 
         </div>
